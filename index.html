@@ -1,54 +1,79 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lux Climate — Ремонт кондиционеров</title>
   <style>
-    body { font-family: sans-serif; padding: 20px; background: #f0f4f8; }
-    h1, h2 { color: #333; }
-    ul { padding-left: 20px; }
-    .form, .reviews { max-width: 500px; background: white; padding: 20px; margin-top: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-    input, textarea { width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc; }
-    button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
-    button:hover { background: #0056b3; }
-    .review { background: #f8f9fa; border-left: 5px solid #007bff; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
+    header { background: #0077cc; color: white; padding: 20px; text-align: center; }
+    .section { padding: 20px; }
+    .services ul, .benefits ul { padding-left: 20px; }
+    .contact a { color: #0077cc; text-decoration: none; display: block; margin-bottom: 8px; }
+    .form input, .form textarea { display: block; width: 100%; margin-bottom: 10px; padding: 8px; }
+    .form button { padding: 10px 20px; background: #0077cc; color: white; border: none; cursor: pointer; }
+    .reviews { background: #fff; padding: 20px; margin: 20px; border-radius: 8px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    .review { margin-bottom: 10px; padding-left: 10px; border-left: 4px solid #0077cc; }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Lux Climate</h1>
+    <p><a href="#" style="color:white;">Кыргызча</a> | <a href="#" style="color:white;">Русский</a></p>
+    <button onclick="window.location.href='tel:+996507600775'">Позвонить</button>
+  </header>
 
-  <h1>Lux Climate</h1>
-  <p>Профессиональный ремонт и обслуживание кондиционеров в Бишкеке</p>
+  <div class="section about">
+    <h2>О нас</h2>
+    <p>Профессиональный ремонт и обслуживание кондиционеров в Бишкеке и области. Гарантия на все виды работ.</p>
+  </div>
 
-  <h2>Наши услуги</h2>
-  <ul>
-    <li>Диагностика — 500 сом</li>
-    <li>Заправка — 1500 сом</li>
-    <li>Установка — от 4000 сом</li>
-    <li>Чистка — от 2000 сом</li>
-  </ul>
+  <div class="section services">
+    <h2>Наши услуги</h2>
+    <ul>
+      <li>Диагностика — 500 сом</li>
+      <li>Заправка фреоном — 1500 сом</li>
+      <li>Установка/демонтаж — от 4000 сом</li>
+      <li>Чистка кондиционера — от 2000 сом</li>
+      <li>Ремонт платы, вентилятора, компрессора и др.</li>
+    </ul>
+  </div>
 
-  <div class="form">
-    <h2>Оставьте заявку</h2>
+  <div class="section benefits">
+    <h2>Почему выбирают нас</h2>
+    <ul>
+      <li>Быстрый выезд</li>
+      <li>Квалифицированные мастера</li>
+      <li>Честные цены</li>
+      <li>Гарантия до 6 месяцев</li>
+      <li>Работаем 7 дней в неделю</li>
+    </ul>
+  </div>
+
+  <div class="section reviews">
+    <h2>Отзывы клиентов</h2>
+    <div class="review">“Быстро приехали и всё сделали. Спасибо!” — Айнура</div>
+    <div class="review">“Чистка прошла отлично, кондиционер как новый!” — Тимур</div>
+    <div class="review">“Установка за 1 день, аккуратно, профессионально.” — Жылдыз</div>
+  </div>
+
+  <div class="section contact">
+    <h2>Контакты</h2>
+    <a href="tel:+996507600775">+996 507 600 775</a>
+    <a href="https://instagram.com/luxclimate.kg" target="_blank">Instagram: @luxclimate.kg</a>
+    <a href="https://t.me/luxclimate" target="_blank">Telegram</a>
+    <a href="https://wa.me/996507600775" target="_blank">WhatsApp</a>
+    <button onclick="alert('Открытие карты...')">Отправить геолокацию</button>
+  </div>
+
+  <div class="section form">
+    <h2>Оставить заявку</h2>
     <form id="orderForm">
       <input type="text" name="name" placeholder="Ваше имя" required>
       <input type="tel" name="phone" placeholder="Номер телефона" required>
       <textarea name="message" placeholder="Опишите проблему" required></textarea>
-      <button type="submit">Отправить</button>
+      <button type="submit">Оставить заявку</button>
     </form>
-  </div>
-
-  <div class="reviews">
-    <h2>Отзывы клиентов</h2>
-    <div class="review">
-      “Быстро приехали и заправили кондиционер. Работает отлично. Спасибо!”<br>— Айзат
-    </div>
-    <div class="review">
-      “Хорошая чистка, в комнате стало свежее. Буду обращаться ещё.”<br>— Тимур
-    </div>
-    <div class="review">
-      “Поставили сплит-систему за день, аккуратно. Рекомендую.”<br>— Жылдыз
-    </div>
   </div>
 
   <script>
@@ -58,21 +83,16 @@
 
     document.getElementById('orderForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      
       const name = this.name.value.trim();
       const phone = this.phone.value.trim();
       const message = this.message.value.trim();
 
-      const text = `Новая заявка с сайта:\n\nИмя: ${name}\nТелефон: ${phone}\nПроблема: ${message}`;
+      const text = `Новая заявка с сайта:\nИмя: ${name}\nТелефон: ${phone}\nПроблема: ${message}`;
 
       fetch(URI_API, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: text,
-          parse_mode: 'HTML'
-        })
+        body: JSON.stringify({ chat_id: CHAT_ID, text: text })
       }).then(res => {
         if (res.ok) {
           alert("Заявка отправлена!");
@@ -83,6 +103,5 @@
       });
     });
   </script>
-
 </body>
 </html>
